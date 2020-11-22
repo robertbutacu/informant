@@ -1,7 +1,10 @@
 package com.robert.butacu.informant.models
 
 import java.time.Instant
+
 import cats.effect.Clock
+import com.robert.butacu.informant.models.atoms._
+
 import scala.language.higherKinds
 
 trait Estimator[A] {
