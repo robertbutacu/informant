@@ -25,6 +25,9 @@ val commonSettings = Seq(
   fork in Test := true,
   parallelExecution in IntegrationTest := false,
   fork in IntegrationTest := false,
+  libraryDependencies ++= Seq(
+    "org.typelevel" %% "cats-effect" % "2.2.0"
+  ),
   addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 )
 
