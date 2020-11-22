@@ -24,4 +24,5 @@ trait ProgressReporter[F[_]] {
   def reportInterrupt[A: Estimator](progress: Progress[A])(implicit clock: Clock[F]): F[InterruptedReport[A]]
   def reportCompleted[A: Estimator](progress: Progress[A])(implicit clock: Clock[F]): F[Report[A]]
   def updateProgress[A: Estimator](current: Progress[A])(implicit clock: Clock[F]): F[Progress[A]]
+  def start[A: Estimator](process: ProcessDetails, total: Totality[A]): F[Progress[A]]
 }
